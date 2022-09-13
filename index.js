@@ -5,11 +5,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const Todo = require("./models/todo");
 const PORT = process.env.PORT || 4000;
-// const DB_String = process.env.CUSTOMCONNSTR_mongodb_url;
-
-// Example MongoDB Database Connection Address
-const DB_String =
-  "mongodb://username:password@host_address:PORT/DB_NAME?OPTIONS";
+const DB_String = process.env.CUSTOMCONNSTR_mongodb_url;
 
 app.use("/", express.static(path.resolve(__dirname, "assets")));
 app.use(bodyParser.json());
